@@ -2,10 +2,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import "owl.carousel/dist/assets/owl.carousel.min.css";
-import "owl.carousel/dist/assets/owl.theme.default.min.css";
-import "owl.carousel";
-
+import "./owl-carousel-allhomes/owl.carousel.min.css";
 
 const Owl_Carousel_Options = {
 
@@ -99,7 +96,7 @@ const Owl_Carousel_Options = {
 class OwlCarousel extends Component {
     constructor(props, context) {
         super(props, context);
-        
+
         this.next = this.next.bind(this);
         this.prev = this.prev.bind(this);
         this.to = this.to.bind(this);
@@ -216,7 +213,7 @@ class OwlCarousel extends Component {
         } = this.propsWithoutOptions;
 
         return (
-            <div 
+            <div
                 className={`owl-carousel ${className}`}
                 ref={inst => this.inst = inst}
                 {...props}
