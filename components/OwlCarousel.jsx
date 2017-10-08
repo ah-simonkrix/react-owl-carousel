@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import "./owl-carousel-allhomes/owl.carousel.min.css";
+import './owl-carousel-allhomes/owl.carousel.min';
 
 const Owl_Carousel_Options = {
 
@@ -215,7 +216,7 @@ class OwlCarousel extends Component {
         return (
             <div
                 className={`owl-carousel ${className}`}
-                ref={inst => this.inst = inst}
+                ref={inst => { console.log('Saving ref'); this.inst = inst; }}
                 {...props}
             >
                 {children}
